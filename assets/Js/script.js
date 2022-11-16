@@ -77,7 +77,7 @@ var correct;
 // This function cycles through the object array containing the quiz questions to generate the questions and answers.
 function generateQuizQuestion(){
     gameoverDiv.style.display="none";
-    if (currentQuestionIndex===finalQuestionIndex=){
+    if (currentQuestionIndex===finalQuestionIndex){
         return showScore();
     } 
     var currentQuestion = quizQuestions[currentQuestionIndex];
@@ -90,9 +90,10 @@ function generateQuizQuestion(){
 
 // Start Quiz function starts the TimeRanges, hides the start button, and displays the first quiz question.
 function startQuiz(){
-    gameoverDiv.style.display = "none";
-    startQuizDiv.style.display = "none";
+    gameoverDiv.style.display="none";
+    startQuizDiv.style.display="none";
     generateQuizQuestion();
+}
 
     //Timer
     timerInterval = setInterval(function() {
