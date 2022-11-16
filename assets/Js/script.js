@@ -106,15 +106,14 @@ function startQuiz(){
         }
       }, 1000);
     quizBody.style.display = "block";
-}
+
 // This function is the end page screen that displays your score after either completeing the quiz or upon timer run out
-function showScore(){
+function showScore() {
     quizBody.style.display="none";
     gameoverDiv.style.display="flex";
     clearInterval(timerInterval);
     highscoreInputName.value="";
     finalScoreEl.innerHTML="You got" + score + "out of" + quizQuestions.length + "correct!";
-}
 }
 
 // On click of the submit button, we run the function highscore that saves and stringifies the array of high scores already saved in local stoage
@@ -174,9 +173,11 @@ function showHighscore(){
 // This function clears the local storage of the high scores as well as clearing the text from the high score board
 function clearScore(){
     window.localStorage.clear();
-    highscoreDisplayName.textContent = "";
-    highscoreDisplayScore.textContent = "";
+    highscoreDisplayName.textContent="";
+    highscoreDisplayScore.textContent="";
+
 }
+
 
 // This function sets all the variables back to their original values and shows the home page to enable replay of the quiz
 function replayQuiz(){
