@@ -13,11 +13,10 @@ var highscoreInputName = document.getElementById("initials");
 var highscoreDisplayName = document.getElementById("highscore-initials");
 var endGameBtns = document.getElementById("endGameBtns");
 var submitScoreBtn = document.getElementById("submitScore");
-var highscoreDisplayScore = document.getElementById("highscore-score");
-var buttonA = document.getElementById("a");
-var buttonB = document.getElementById("b");
-var buttonC = document.getElementById("c");
-var buttonD = document.getElementById("d");
+var buttonA=document.getElementById("a");
+var buttonB=document.getElementById("b");
+var buttonC=document.getElementById("c");
+var buttonD=document.getElementById("d");
 
 // Quiz question object
 var quizQuestions = [{
@@ -128,7 +127,7 @@ submitScoreBtn.addEventListener("click", function highscore(){
 
     if(highscoreInputName.value === "") {
         alert("Initials cannot be blank");
-        return false;
+        return;
     }else{
         var savedHighscores = JSON.parse(localStorage.getItem("savedHighscores")) || [];
         var currentUser = highscoreInputName.value.trim();
@@ -152,8 +151,8 @@ submitScoreBtn.addEventListener("click", function highscore(){
 
 // This function clears the list for the high scores and generates a new high score list from local storage
 function generateHighscores(){
-    highscoreDisplayName.innerHTML = "";
-    highscoreDisplayScore.innerHTML = "";
+    // highscoreDisplayName.innerHTML = "";
+    // highscoreDisplayScore.innerHTML = "";
     var highscores = JSON.parse(localStorage.getItem("savedHighscores")) || [];
     for (i=0; i<highscores.length; i++){
         var newNameSpan = document.createElement("li");
@@ -172,7 +171,6 @@ function showHighscore(){
     highscoreContainer.style.display = "flex";
     highscoreDiv.style.display = "block";
     endGameBtns.style.display = "flex";
-
     generateHighscores();
 }
 

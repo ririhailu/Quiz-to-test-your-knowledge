@@ -28,7 +28,7 @@
         <div id="gameover">
 
             <div id="finalScore"></div>
-            <input type="text" size = "40" placeholder="Enter you initials for high score" name="intials" id="initials"/>
+            <input type="text" size = "40" maxlength="2" placeholder="Enter you initials for high score" name="intials" id="initials"/>
             <button id="submitScore">Submit Score</button>
         </div>
         <div id=highscoreContainer>
@@ -37,8 +37,14 @@
                 <h3>User Initials</h3>
                 <h3>Score</h3>
             </div>
-            <div id = "highscore-initials"></div>
-            <div id = "highscore-score"></div>
+            <div id="holder-scores">
+                <div id ="highscore-initials">
+                    <li>Ag</li>
+                </div>
+                <div id = "highscore-score">
+                    <li>5</li>
+                </div>
+            </div>
         </div>
         <div id="endGameBtns">
             <button id="playAgain" onclick="replayQuiz()">Play Again</button>
