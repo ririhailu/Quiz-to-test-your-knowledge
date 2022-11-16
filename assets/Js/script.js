@@ -109,11 +109,12 @@ function startQuiz(){
 }
 // This function is the end page screen that displays your score after either completeing the quiz or upon timer run out
 function showScore(){
-    quizBody.style.display = "none"
-    gameoverDiv.style.display = "flex";
+    quizBody.style.display="none";
+    gameoverDiv.style.display="flex";
     clearInterval(timerInterval);
-    highscoreInputName.value = "";
-    finalScoreEl.innerHTML = "You got " + score + " out of " + quizQuestions.length + " correct!";
+    highscoreInputName.value="";
+    finalScoreEl.innerHTML="You got" + score + "out of" + quizQuestions.length + "correct!";
+}
 }
 
 // On click of the submit button, we run the function highscore that saves and stringifies the array of high scores already saved in local stoage
