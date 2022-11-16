@@ -19,14 +19,8 @@ var buttonC=document.getElementById("c");
 var buttonD=document.getElementById("d");
 
 // Quiz question object
-var quizQuestions = [{
-    question: "How do you find the minimum of x and y using JavaScript?",
-    choiceA: "min(x,y);",
-    choiceB: "Math.min(x,y)",
-    choiceC: "Math.min(xy)",
-    choiceD: "min(xy);",
-    correctAnswer: "b"},
-  {
+
+  { 
     question: "Which JavaScript label catches all the values, except for the ones specified?",
     choiceA: "catch",
     choiceB: "label",
@@ -47,8 +41,8 @@ var quizQuestions = [{
     choiceC: "NaN",
     choiceD: "syntaxError",
     correctAnswer: "a"},
-    {
-    question: "JavaScript file has an extension of?",
+     {
+        question: "JavaScript file has an extension of?",
     choiceA: ".java",
     choiceB: ".js",
     choiceC: ".javaScript",
@@ -61,16 +55,16 @@ var quizQuestions = [{
     choiceC: "link",
     choiceD: "none",
     correctAnswer: "b"},
-    {
+     {
+        
     question: "Which of the dialog box display a message and a data entry field?",
     choiceA: "alert()",
     choiceB: "prompt()",
     choiceC: "confirm()",
     choiceD: "msg()",
     correctAnswer: "b"},
-
-
     ];
+    
 // Other global variables
 var finalQuestionIndex = quizQuestions.length;
 var currentQuestionIndex = 0;
