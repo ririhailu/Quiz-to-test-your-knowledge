@@ -21,6 +21,7 @@ var buttonD=document.getElementById("d");
 // Quiz question object
 
   { 
+   var quizQuestions = [{
     question: "Which JavaScript label catches all the values, except for the ones specified?",
     choiceA: "catch",
     choiceB: "label",
@@ -41,8 +42,8 @@ var buttonD=document.getElementById("d");
     choiceC: "NaN",
     choiceD: "syntaxError",
     correctAnswer: "a"},
-     {
-        question: "JavaScript file has an extension of?",
+    {
+    question: "JavaScript file has an extension of?",
     choiceA: ".java",
     choiceB: ".js",
     choiceC: ".javaScript",
@@ -63,8 +64,8 @@ var buttonD=document.getElementById("d");
     choiceC: "confirm()",
     choiceD: "msg()",
     correctAnswer: "b"},
-    ];
-    
+    ]};
+
 // Other global variables
 var finalQuestionIndex = quizQuestions.length;
 var currentQuestionIndex = 0;
@@ -75,8 +76,8 @@ var correct;
 
 // This function cycles through the object array containing the quiz questions to generate the questions and answers.
 function generateQuizQuestion(){
-    gameoverDiv.style.display = "none";
-    if (currentQuestionIndex === finalQuestionIndex){
+    gameoverDiv.style.display="none";
+    if (currentQuestionIndex===finalQuestionIndex=){
         return showScore();
     } 
     var currentQuestion = quizQuestions[currentQuestionIndex];
